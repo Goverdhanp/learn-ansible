@@ -1,0 +1,36 @@
+- name: Play variables
+  hosts: localhost
+  connection: local
+  vars:
+    URL: playgoogle.com
+  roles:
+    - demo
+  tasks:  
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: "{{ URL}}"
+
+# in ansible we access variable with {{}}
+#also, if the value is variable or starts with variable we need to quote it(double quotes preferred).
+
+# key: "{{ val }}"
+# key: "{{ val }} some other string "
+# key: some - {{ val }}  # this does not require quotes 
+
+
+
+- name: Task variables
+  hosts: localhost
+  connection: local
+  tasks:  
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: "{{ URL}}"
+      vars:
+        URL: task.google.com
+
+- name: Roles variables
+  hosts: localhost
+  connection: local
+  roles:
+    - demo
