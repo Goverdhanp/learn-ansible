@@ -1,0 +1,13 @@
+- name: conditoin demo
+  hosts: localhost
+  connection: local
+  tasks: 
+    - name: print fruit
+      ansible.builtin.debug:
+        msg: "apple"
+      tags: fruit 
+
+    - name: print vegetable
+      ansible.builtin.debug:
+        msg: "vegetable"
+      tags: vegetable 
