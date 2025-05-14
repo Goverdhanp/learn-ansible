@@ -1,0 +1,13 @@
+- name: conditoin demo
+  hosts: localhost
+  connection: local
+  tasks: 
+    - name: print fruit
+      ansible.builtin.shell: cat /etc/passwd | grep jhon
+      register: out
+      ignore_errors: yes 
+
+    - name: print vegetable
+      ansible.builtin.debug:
+        msg: john user is not there in system
+      tags: out.stdout == ""
