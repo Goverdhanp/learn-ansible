@@ -3,12 +3,12 @@
   connection: local
   tasks: 
     - name: x is greater than 10
-      when : x|init >10
+      when : x|int > 10
       ansible.builtin.debug:
         msg: " x is greater than 10"
 
 
     - name: x is less than 10
-      when : x|init <10
+      when : x|int < 10
       ansible.builtin.debug:
         msg: " x is less than 10"
