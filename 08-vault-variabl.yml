@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    password: abcd$1234
+    password: abcd$12345
   tasks:
     - name: print Password
       ansible.builtin.debug:
