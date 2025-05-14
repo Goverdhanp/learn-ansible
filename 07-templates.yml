@@ -4,5 +4,5 @@
   tasks: 
     - name: file copy
       ansible.builtin.template: 
-      src: text.txt
-      dest: /tmp/test.txt
+        src: text.txt
+        dest: /tmp/test.txt
