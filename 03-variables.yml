@@ -34,3 +34,13 @@
   connection: local
   roles:
     - demo
+
+
+# from command line also we can send variable to ansible playbook by using -e option 
+# if the same variable name comes in different location then precedence will come
+
+# 1.CLI  variable
+# 2. Task variable
+# 3. role variable
+# 4. play variable
+ 
